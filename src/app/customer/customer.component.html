@@ -1,0 +1,49 @@
+<div class="mat-elevation-z8">
+    <button (click)="addcustomer()" mat-raised-button color="primary">
+        Add user</button>
+    <table mat-table matSort [dataSource]="dataSource">
+        <mat-card-header>
+            <h2>Customer Listing</h2>
+        </mat-card-header>
+        <!-- Username Column -->
+        <ng-container matColumnDef="code">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> Employee ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> First Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="lastname">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> Last Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.lastname}} </td>
+        </ng-container>
+        <!-- Email Column -->
+        <ng-container matColumnDef="creditlimit">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> Creditlimit </th>
+            <td mat-cell *matCellDef="let element"> {{element.Creditlimit}} </td>
+        </ng-container>
+
+        <!-- Action Column -->
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef> Action </th>
+            <td mat-cell *matCellDef="let element">
+                <button (click)="Updatecustomer(element.id)" mat-raised-button color="primary">
+                    Edit </button>
+                <button (click)="Removecustomer(element.id)" mat-raised-button color="accent">
+                    Delete </button>
+            </td>
+
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+    </mat-paginator>
+</div>

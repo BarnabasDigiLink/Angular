@@ -1,0 +1,60 @@
+<!-- <mat-card>
+    <mat-card-header>
+        <h2>User Signup</h2>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="registerform" (ngSubmit)="proceedregistration()">
+            <mat-form-field class="example-full-width">
+                <mat-label>User Name</mat-label>
+                <input matInput formControlName ="id" >
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName ="name" >
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName ="password" >
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName ="email" >
+            </mat-form-field>
+            <div>
+                <mat-radio-group aria-label="Select an option" formControlName="gender" aria-label="Gender">
+                    <mat-radio-button value="male">Male</mat-radio-button>
+                    <mat-radio-button value="female">Female</mat-radio-button>
+                  </mat-radio-group>
+            </div>
+            <div>
+            <button mat-raised-button color="primary">Submit</button>
+            <a routerLink="/login" mat-raised-button color="accent">Back to login</a>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card> -->
+
+<div class="container">
+    <form (ngSubmit)="proceedregistration()" class="form-box1" [formGroup]="registerform">
+        <h3>Signup User</h3>
+        <div class="form-group">
+            <label>User Name</label>
+            <input type="text" formControlName="id" class="form-control mb-3 nt-3" placeholder="Enter User Name"/>
+        </div>
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" formControlName="name" class="form-control mb-3 nt-3" placeholder="Enter First Name"/>
+        </div>
+        <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" formControlName="email" class="form-control mb-3 nt-3" placeholder="Enter Email Address"/>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" formControlName="password" class="form-control mb-3 nt-3" placeholder="Enter Password"/>
+        </div>
+        <span>Already registered? <a style="color: blue; margin-top: 10px;" routerLink="/login"> Click here to login.</a></span>
+        <br/>
+        <button type="submit" class="btn btn-success">Signup</button>
+    </form>
+</div>

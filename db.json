@@ -1,0 +1,113 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "firstName": "asd",
+      "lastName": "asdsasad",
+      "email": "asdas@gmail.com",
+      "mobile": "0762770654",
+      "salary": "Java Delveloper"
+    },
+    {
+      "id": 3,
+      "firstName": "John",
+      "lastName": "Cena",
+      "email": "john@wwe.com",
+      "mobile": "0762116600",
+      "salary": "Data Scientist"
+    }
+  ],
+  "users": [
+    {
+      "id": "admin",
+      "name": "Benn",
+      "password": "123@hloni",
+      "email": "hloni@webmail.com",
+      "gender": "male",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "Barnabas10",
+      "name": "Moko",
+      "password": "Jesus@90",
+      "email": "barnabs@gmail.com",
+      "gender": "male",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": "Hloni",
+      "name": "Barnabas",
+      "password": "Hloni@123",
+      "email": "barnabas@webmail.co.za",
+      "gender": "male",
+      "role": "user",
+      "isActive": true
+    }
+  ],
+  "role": [
+    {
+      "code": "admin",
+      "name": "Admin"
+    },
+    {
+      "code": "user",
+      "name": "User"
+    }
+  ],
+  "menu": [
+    {
+      "code": "admin",
+      "name": "Admin"
+    },
+    {
+      "code": "customer",
+      "name": "Customer"
+    }
+  ],
+  "roleaccess": [
+    {
+      "role": "admin",
+      "menu": "user",
+      "haveedit": true,
+      "haveadd": true,
+      "havedelete": true
+    },
+    {
+      "role": "admin",
+      "menu": "customer",
+      "haveedit": true,
+      "haveadd": true,
+      "havedelete": true
+    },
+    {
+      "role": "user",
+      "menu": "user",
+      "haveedit": false,
+      "haveadd": false,
+      "havedelete": false
+    },
+    {
+      "role": "user",
+      "menu": "customer",
+      "haveedit": true,
+      "haveadd": true,
+      "havedelete": false
+    }
+  ],
+  "customer": [
+    {
+      "id": 1,
+      "name": "Obakeng",
+      "lastname": "Moloi",
+      "Creditlimit": 5000
+    },
+    {
+      "id": 2,
+      "name": "Obakeng",
+      "lastname": "Mokoena",
+      "Creditlimit": 7000
+    }
+  ]
+}
